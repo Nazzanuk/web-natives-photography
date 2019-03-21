@@ -1,0 +1,113 @@
+@import "../../global/mixins";
+
+[data-screen="project"] {
+  flex           : 1 1 auto;
+  display        : flex;
+  flex-direction : column;
+  padding-left   : 0 !important;
+  padding-right  : 0 !important;
+
+
+  .project-title {
+    //margin-top     : 40px;
+    font-weight : 200;
+    font-size   : 45px;
+    line-height : 60px;
+  }
+
+
+  .project-summary {
+    margin-top  : 20px;
+    font-weight : 300;
+    font-size   : 20px;
+    line-height : 1.7;
+
+    max-width   : 920px;
+  }
+
+  .project-info {
+    height         : 130px;
+    padding        : 40px 40px 0;
+    display        : flex;
+    flex-direction : column;
+
+    font-size      : 12px;
+    line-height    : 1.7;
+    font-weight    : 500;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color: inherit;
+    text-decoration: none;
+
+    .info-set{
+      font-weight: 700;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .info-title {
+
+    }
+
+    .info-position {
+
+    }
+  }
+
+  .project-images {
+    flex     : 1 1 0;
+    display  : flex;
+    //width: fit-content;
+    //margin-left: -110px;
+    position : relative;
+
+    .image-box-container {
+      flex            : 1 1 0;
+      display         : flex;
+      flex-direction  : row;
+      align-items     : center;
+      justify-content : flex-start;
+      transition      : .6s;
+      position        : relative;
+      overflow        : visible;
+    }
+
+    .image-prev {
+      position : absolute;
+      top      : 0;
+      left     : 0;
+      bottom   : 0;
+      width    : 50%;
+      z-index  : 1;
+    }
+
+    .image-next {
+      position : absolute;
+      top      : 0;
+      right    : 0;
+      bottom   : 0;
+      width    : 50%;
+      z-index  : 1;
+    }
+
+    .image-box {
+      display         : flex;
+      align-items     : center;
+      justify-content : center;
+      flex-direction  : column;
+      flex            : 0 0 100vw;
+      height          : auto;
+      cursor          : pointer;
+      padding         : 40px;
+
+      .box-image {
+        height              : 60vh;
+        width               : 100%;
+        background-size     : contain;
+        background-position : center;
+        background-repeat   : no-repeat;
+        position            : relative;
+      }
+    }
+  }
+}

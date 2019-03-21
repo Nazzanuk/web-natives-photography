@@ -1,0 +1,47 @@
+@import "../../global/mixins";
+
+[data-component="footer"] {
+  background: $primary2;
+  background: #000;
+  color: white;
+  justify-self: flex-end;
+  margin-top: auto;
+
+  .footer {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+    flex: 1 0 auto;
+
+
+
+    .footer-title {
+      flex: 2 1 300px;
+      font-size: 33px;
+      font-weight: 100;
+      line-height: 1;
+      text-transform: uppercase;
+      align-self: flex-end;
+    }
+
+    .footer-links {
+      flex: 1 1 250px;
+
+      .footer-link {
+        @include text1;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include linkize;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

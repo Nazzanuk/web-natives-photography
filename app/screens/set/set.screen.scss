@@ -1,0 +1,74 @@
+@import "../../global/mixins";
+
+[data-screen="set"] {
+  flex           : 1 1 auto;
+  display        : flex;
+  flex-direction : column;
+
+
+  .set-title {
+    //margin-top     : 40px;
+    font-weight : 200;
+    font-size   : 45px;
+    line-height : 60px;
+  }
+
+
+  .set-summary {
+    margin-top  : 20px;
+    font-weight : 300;
+    font-size   : 20px;
+    line-height : 1.7;
+
+    max-width   : 920px;
+  }
+
+  .set-projects {
+    margin-top     : 60px;
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+
+
+    &:hover {
+      .project {
+        opacity : 0.6;
+      }
+    }
+
+    .project {
+      display         : flex;
+      flex-direction  : column;
+      align-items     : center;
+      flex            : 0 1 300px;
+      height          : 300px;
+      cursor          : pointer;
+      transition      : .6s;
+      text-decoration : none;
+      color           : inherit;
+
+      &:hover {
+        opacity : 1;
+      }
+
+      .project-image {
+        height              : 200px;
+        width               : 200px;
+        background          : #ddd;
+        background-size     : cover;
+        background-position : center;
+        background-repeat   : no-repeat;
+      }
+
+      .project-title {
+        margin-top     : 40px;
+        font-size      : 12px;
+        font-weight    : 400;
+        letter-spacing : 3px;
+        text-transform : uppercase;
+        //font-size   : px;
+        //line-height : 1.7;
+      }
+    }
+  }
+}

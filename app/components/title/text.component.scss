@@ -1,0 +1,22 @@
+@import "../../global/mixins";
+
+[data-component="title"] {
+  .title {
+
+
+  }
+
+  .title-paper {
+
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 300;
+    //margin-top: 40px;
+    position: relative;
+
+    padding: 60px;
+    @include shadow1;
+    background: white;
+  }
+
+}

@@ -1,0 +1,29 @@
+@import "../../global/mixins";
+
+[data-component="loader"] {
+  &[data-visible="true" ] {
+    opacity : 1;
+  }
+
+  position        : fixed;
+
+  top             : 0;
+  bottom          : 0;
+  left            : 0;
+  right           : 0;
+
+  z-index         : 10000;
+  user-select     : none;
+  pointer-events  : none;
+
+
+  font-size       : 60px;
+  //width           : 100px;
+  //height          : 100px;
+  margin          : -50px 0 0 -50px;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  opacity         : 0;
+  transition      : .6s;
+}

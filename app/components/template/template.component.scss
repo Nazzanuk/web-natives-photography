@@ -1,0 +1,41 @@
+@import "../../global/mixins";
+
+[data-component="template"] {
+  min-height: 100vh;
+  padding: 100px 0 80px;
+
+  background-image: linear-gradient(#fff 50%, #f7f7f7 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include mobile {
+    padding: 60px 0;
+    margin: 0 0px;
+  }
+
+  .template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    .template-title {
+      @include title;
+      text-align: center;
+    }
+
+    .template-summary {
+      @include summary;
+      text-align: center;
+      max-width: 800px;
+
+    }
+  }
+
+}

@@ -1,0 +1,69 @@
+@import "../../global/mixins";
+
+[data-component="newsletter-popup"] {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top : 0;
+  left : 0;
+  bottom : 0;
+  right : 0;
+  z-index: -1;
+  transition: .3s;
+
+  &[data-active="true"] {
+    z-index: 2000;
+    .newsletter-popup-background {
+      visibility: visible;
+      opacity: 1;
+      z-index: 2;
+
+    }
+
+    .newsletter-popup {
+      visibility: visible;
+      opacity: 1;
+      z-index: 3;
+      transform: translateX(0);
+    }
+  }
+
+  .newsletter-popup-background {
+
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .newsletter-popup {
+    position: fixed;
+
+    transform: translateX(-30px);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s;
+
+    //position: fixed;
+    width: 300px;
+    height: 300px;
+    background: white;
+    //border-left: 3px solid $primary2;
+    //border-top: 3px solid $primary2;
+    @include shadow2;
+    padding-top: 50px;
+
+
+  }
+}

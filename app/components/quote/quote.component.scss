@@ -1,0 +1,50 @@
+@import "../../global/mixins";
+
+[data-component="quote"] {
+  .quote {
+
+    //background: $primary2;
+    //color: white;
+    @include title1;
+    font-size: 30px;
+    padding: 20px 70px;
+    //margin-left: -80px;
+    max-width: 650px;
+    //margin-bottom: 60px;
+    //@include shadow2;
+    position: relative;
+    margin: 0 auto 60px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4;
+    //width: calc(100% + 160px);
+    text-align: left;
+
+    i {
+      position: absolute;
+      color: $primary;
+    }
+
+    .fa-quote-left {
+      top: 20px;
+      left: 20px;
+    }
+
+    .fa-quote-right {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+  .quote-author {
+    padding: 10px 20px;
+    background: $primary2;
+    color: white;
+    @include text4;
+    margin: 0 auto;
+    position: absolute;
+    right: 70px;
+    bottom: -30px;
+  }
+
+}

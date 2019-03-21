@@ -1,0 +1,95 @@
+@import "../../global/mixins";
+
+[data-component="randoms"] {
+
+  //margin-top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  //width: 100%;
+  //margin-left: -1px;
+  //margin-top: -1px;
+  margin-left: -20px;
+  margin-bottom: -20px;
+
+  .random {
+    min-height: 350px;
+    flex: 1 1 250px;
+    position: relative;
+    //margin-top: 1px;
+
+    background: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.05);
+    //border-top: 3px solid $primary;
+    overflow: hidden;
+    max-width: 660px;
+
+    @include linkize;
+
+    &:hover {
+      .item-image {
+        transform: scale(1.05);
+        filter:brightness(150%);
+      }
+    }
+
+
+    &:first-child {
+      //margin-left: 0px;
+      //height: 150px;
+    }
+
+    &:nth-child(4n) {
+      flex: 1 1 450px;
+      max-width: 660px;
+    }
+
+    &:nth-child(3n - 1) {
+      flex: 1 1 300px;
+    }
+
+    .item-image {
+      height: 200px;
+      //position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: 1s;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .item-overlay {
+      //position: absolute;
+      position: relative;
+      z-index: 2;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      padding: 20px 20px 30px;
+
+      //min-height: 200px;
+      background: white;
+      color: black;
+
+      .overlay-title {
+        @include title3;
+        margin-top: 10px;
+      }
+
+      .overlay-author {
+        @include text2;
+        color: $primary;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,113 @@
+@import "../../global/mixins";
+
+[data-component="feature"] {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+    flex: 1 1 auto;
+    position: relative;
+
+    padding: 0px;
+    text-decoration: none;
+
+
+    .overlay-stats {
+      @include text2;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      .overlay-stat {
+        padding: 0 10px;
+        //border-left: 1px solid #ddd;
+        vertical-align: middle;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        i {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        &:first-child {
+          padding-left: 0;
+          border-left: 0;
+        }
+
+      }
+    }
+
+
+    &:first-child {
+      //margin-left: 0px;
+      //height: 150px;
+    }
+
+    @include linkize;
+
+
+    &:hover {
+      .item-image {
+        //transform: scale(1.05);
+        filter:brightness(150%);
+      }
+
+
+      .item-overlay {
+
+        transform: translateY(-2px);
+      }
+    }
+
+    .item-image {
+      flex: 1 0 70%;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 5px 5px 25px rgba(0,0,0,0.05);
+      transition: 1s;
+    }
+
+    .item-overlay {
+      height: auto;
+      align-self: flex-start;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+
+      min-height: 200px;
+      background: white;
+      color: black;
+
+      box-shadow: 5px 5px 25px rgba(0,0,0,0.05);
+      margin-right: -100px;
+      margin-top: 40px;
+      position: relative;
+      transition: .2s;
+
+      .overlay-title {
+        @include title1;
+        margin-top: 10px;
+        background: white;
+      }
+
+      .overlay-author {
+        @include text2;
+        color: $primary;
+      }
+    }
+  }
+
+}

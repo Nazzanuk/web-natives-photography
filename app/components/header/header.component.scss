@@ -1,0 +1,34 @@
+@import "../../global/mixins";
+
+[data-component="header"] {
+  height         : 130px;
+  padding        : 40px;
+
+  display        : flex;
+  flex-direction : row;
+  align-items    : center;
+
+  .header-logo {
+    color: inherit;
+    text-decoration: none;
+    margin-right   : auto;
+
+    font-size      : 15px;
+    /* background: #efefef; */
+    /* color: white; */
+    padding        : 15px 0;
+    font-weight    : 600;
+    letter-spacing : 3px;
+    text-transform : uppercase;
+    cursor         : pointer;
+    /* border: 1px solid #ddd; */
+  }
+
+
+  @include mobile {
+
+    //height : 70px;
+  }
+
+
+}
