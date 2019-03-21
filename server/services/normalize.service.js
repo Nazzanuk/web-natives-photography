@@ -44,9 +44,16 @@ export const NormalizeMedia = (media) => {
 export const NormalizeProject = (project) => {
     project.title   = _.get(project, "title.rendered");
     project.summary = _.get(project, "acf.summary");
-    project.images = _.get(project, "acf.images");
+    project.images  = _.get(project, "acf.images") || [];
+    _.each(project.images, image => image.url = image.sizes.big);
 
     return project;
+};
+
+export const NormalizeImage = (image) => {
+    image.url = _.get(image, "sizes.big");
+
+    return image;
 };
 
 export const NormalizeSet = (project) => {
