@@ -1864,8 +1864,10 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  padding-top: 0 !important;
   padding-left: 0 !important;
-  padding-right: 0 !important; }
+  padding-right: 0 !important;
+  padding-bottom: 80px !important; }
   [data-screen="project"] .project-title {
     font-weight: 200;
     font-size: 45px;
@@ -1928,9 +1930,9 @@
       flex: 0 0 100vw;
       height: auto;
       cursor: pointer;
-      padding: 40px; }
+      padding: 0 40px; }
       [data-screen="project"] .project-images .image-box .box-image {
-        height: 50vh;
+        height: 60vh;
         width: 100%;
         background-size: contain;
         background-position: center;

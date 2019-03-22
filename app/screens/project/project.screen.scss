@@ -4,8 +4,10 @@
   flex           : 1 1 auto;
   display        : flex;
   flex-direction : column;
+  padding-top    : 0 !important;
   padding-left   : 0 !important;
   padding-right  : 0 !important;
+  padding-bottom:80px !important;
 
 
   .project-title {
@@ -26,23 +28,23 @@
   }
 
   .project-info {
-    height         : 130px;
-    padding        : 40px 40px 0;
-    display        : flex;
-    flex-direction : column;
+    height          : 130px;
+    padding         : 40px 40px 0;
+    display         : flex;
+    flex-direction  : column;
 
-    font-size      : 12px;
-    line-height    : 1.7;
-    font-weight    : 500;
-    letter-spacing : 1px;
-    text-transform : uppercase;
-    color: inherit;
-    text-decoration: none;
+    font-size       : 12px;
+    line-height     : 1.7;
+    font-weight     : 500;
+    letter-spacing  : 1px;
+    text-transform  : uppercase;
+    color           : inherit;
+    text-decoration : none;
 
-    .info-set{
-      font-weight: 700;
-      color: inherit;
-      text-decoration: none;
+    .info-set {
+      font-weight     : 700;
+      color           : inherit;
+      text-decoration : none;
     }
 
     .info-title {
@@ -55,12 +57,12 @@
   }
 
   .project-images {
-    flex     : 1 1 0;
-    display  : flex;
+    flex      : 1 1 0;
+    display   : flex;
     //width: fit-content;
     //margin-left: -110px;
-    position : relative;
-    max-width: 100vw;
+    position  : relative;
+    max-width : 100vw;
 
     .image-box-container {
       flex            : 1 1 0;
@@ -99,10 +101,10 @@
       flex            : 0 0 100vw;
       height          : auto;
       cursor          : pointer;
-      padding         : 40px;
+      padding         : 0 40px;
 
       .box-image {
-        height              : 50vh;
+        height              : 60vh;
         width               : 100%;
         background-size     : contain;
         background-position : center;
