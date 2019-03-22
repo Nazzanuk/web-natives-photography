@@ -3267,11 +3267,14 @@ function (_Component) {
         className: "home-sets"
       }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "set",
+        to: "/set/editorial"
+      }, "Editorial"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "set",
         to: "/set/architecture"
       }, "Architecture"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "set",
-        to: "/set/editorial"
-      }, "Editorial"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/set/interiors"
+      }, "Interiors"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "set",
         to: "/set/creative"
       }, "Creative"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {

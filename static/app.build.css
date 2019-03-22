@@ -1895,7 +1895,8 @@
   [data-screen="project"] .project-images {
     flex: 1 1 0;
     display: flex;
-    position: relative; }
+    position: relative;
+    max-width: 100vw; }
     [data-screen="project"] .project-images .image-box-container {
       flex: 1 1 0;
       display: flex;
@@ -1929,7 +1930,7 @@
       cursor: pointer;
       padding: 40px; }
       [data-screen="project"] .project-images .image-box .box-image {
-        height: 60vh;
+        height: 50vh;
         width: 100%;
         background-size: contain;
         background-position: center;
