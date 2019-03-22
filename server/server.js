@@ -36,6 +36,11 @@ async function StartServer() {
 
     await hapiServer.register(Inert);
 
+    hapiServer.register({
+        plugin: require('hapi-require-https'),
+        options: {}
+    })
+
     hapiServer.route({
         method : "GET",
         path   : "/static/{param*}",

@@ -3796,6 +3796,11 @@ handlebars@^4.1.0:
   optionalDependencies:
     uglify-js "^3.1.4"
 
+hapi-require-https@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/hapi-require-https/-/hapi-require-https-3.0.1.tgz#b844e7919e36325db5de6728d1131f567c9f5336"
+  integrity sha512-yDyfVy2QAWgISjh2UwaspAj/V4zz9vBlSDjWh8kcBFz9ZLkvXZLQRhDLryTyEx58cBZpNQYK+7ExvvtzEa+8GQ==
+
 hapi@^18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/hapi/-/hapi-18.1.0.tgz#98a2a5a8f37a41eb196bdad9727f66b1fbca5fec"
