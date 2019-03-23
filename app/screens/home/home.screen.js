@@ -70,7 +70,7 @@ class HomeScreen extends Component {
                         <Link className="set" to={`/set/architecture`}>Architecture</Link>
                         <Link className="set" to={`/set/interiors`}>Interiors</Link>
                         <Link className="set" to={`/set/creative`}>Creative</Link>
-                        <Link className="set" to={`/set/portraiture`}>Portraiture</Link>
+                        <Link className="set" to={`/set/portraits`}>Portraits</Link>
                         <Link className="set" to={`/set/landscapes`}>Landscapes</Link>
                         <Link className="set" to={`/set/events`}>Events</Link>
                     </div>
