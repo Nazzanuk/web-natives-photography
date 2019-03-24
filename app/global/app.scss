@@ -2,7 +2,7 @@
 
 html body {
   opacity                 : 1;
-  transition              : opacity 6.3s;
+  transition              : opacity 0.9s;
 
   min-width               : 320px;
   background              : #fff;
@@ -168,7 +168,7 @@ html body {
 
     &[data-visible="true" ] {
       opacity    : 1;
-      transition : .3s;
+      transition : 1.5s;
     }
   }
 
@@ -179,7 +179,7 @@ html body {
 
     &[data-visible="true" ] {
       opacity    : 1;
-      transition : .3s;
+      transition : 1.5s;
     }
   }
 

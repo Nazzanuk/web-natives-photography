@@ -189,7 +189,7 @@ function (_Component) {
 
       return React.createElement("div", {
         "data-page": "page"
-      }, React.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_5__["Helmet"], null, React.createElement("title", null, "Web Natives Photography")), React.createElement(components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["default"], null), React.createElement(components_loader_loader_component__WEBPACK_IMPORTED_MODULE_12__["default"], null), React.createElement("div", {
+      }, React.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_5__["Helmet"], null, React.createElement("title", null, "Web Natives Photography")), React.createElement(components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["default"], null), React.createElement("div", {
         className: "app-screens"
       }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
         exact: true,

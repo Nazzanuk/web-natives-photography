@@ -10,7 +10,7 @@
   bottom : 0;
   right : 0;
   z-index: -1;
-  transition: .3s;
+  transition: 1.5s;
 
   &[data-active="true"] {
     z-index: 2000;
@@ -34,7 +34,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: .3s;
+    transition: 1.5s;
 
     position: fixed;
     top: 0;
@@ -53,7 +53,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: .3s;
+    transition: 1.5s;
 
     //position: fixed;
     width: 300px;
