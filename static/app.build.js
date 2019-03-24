@@ -3777,10 +3777,16 @@ function (_Component) {
         className: "project-info"
       }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "info-set",
-        to: "/set/".concat(set.slug)
-      }, set.title), React.createElement("div", {
-        className: "info-title"
-      }, title), React.createElement("div", {
+        to: "/set/".concat(set.slug),
+        dangerouslySetInnerHTML: {
+          __html: set.title
+        }
+      }), React.createElement("div", {
+        className: "info-title",
+        dangerouslySetInnerHTML: {
+          __html: title
+        }
+      }), React.createElement("div", {
         className: "info-title"
       }, currentImage + 1, " of ", images.length)));
     }

@@ -104,8 +104,8 @@ class ProjectScreen extends Component {
                 </div>
 
                 <div className="project-info">
-                    <Link className="info-set" to={`/set/${set.slug}`}>{set.title}</Link>
-                    <div className="info-title">{title}</div>
+                    <Link className="info-set" to={`/set/${set.slug}`} dangerouslySetInnerHTML={{__html: set.title}}/>
+                    <div className="info-title" dangerouslySetInnerHTML={{__html: title}}/>
                     <div className="info-title">{currentImage + 1} of {images.length}</div>
 
                 </div>

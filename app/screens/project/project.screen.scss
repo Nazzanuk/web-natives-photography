@@ -4,10 +4,14 @@
   flex           : 1 1 auto;
   display        : flex;
   flex-direction : column;
-  padding-top    : 0 !important;
+  width:100vw;
   padding-left   : 0 !important;
   padding-right  : 0 !important;
-  padding-bottom:80px !important;
+
+  @include mobile {
+    padding-top    : 0 !important;
+    padding-bottom: 0px !important;
+  }
 
 
   .project-title {
@@ -102,6 +106,12 @@
       height          : auto;
       cursor          : pointer;
       padding         : 0 40px;
+      max-height: 60vh;
+
+      @include mobile {
+        flex            : 0 0 calc(100vw);
+      padding         : 0 0px;
+      }
 
       .box-image {
         height              : 60vh;

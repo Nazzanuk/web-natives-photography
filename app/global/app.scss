@@ -154,6 +154,10 @@ html body {
     height         : 100vh;
     display        : flex;
     flex-direction : column;
+
+    @include mobile {
+      height         : calc(100vh - 60px);
+    }
   }
 
   [data-screen] {
