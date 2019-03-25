@@ -46,7 +46,7 @@ class App extends Component {
                     <title>Web Natives Photography</title>
                 </Helmet>
                 <HeaderComponent/>
-                {/*<LoaderComponent/>*/}
+                <LoaderComponent/>
 
 
                 <div className="app-screens">

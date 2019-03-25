@@ -5,8 +5,10 @@ import {Link}                                       from "react-router-dom";
 import {Helmet}                                     from "react-helmet";
 import {Component, useState, useEffect, useReducer} from "react";
 
-// const Hammer = require('react-hammerjs');
-import Swipe                                        from 'react-easy-swipe';
+
+import ReactDOM from "react-dom";
+
+import Swipe from 'react-easy-swipe';
 
 
 import PromosComponent from "components/promos/promos.component";
@@ -29,6 +31,8 @@ class ProjectScreen extends Component {
 
     constructor(props) {
         super(props);
+
+        this.$images = React.createRef();
 
         console.info("ProjectScreen", {props, state: this.state});
 
@@ -72,9 +76,40 @@ class ProjectScreen extends Component {
         this.setState({currentImage});
     }
 
-    handleScroll(event1, event2) {
-        console.log('handleScroll', event1, event2)
+    handleScroll() {
+        // let timeout;
+        //
+        // return _.throttle((event) => {
+        //     console.log('handleScroll', event);
+        //
+        //     if (event.deltaY > 0) {
+        //         this.nextImage()
+        //     }
+        //     if (event.deltaY < 0) {
+        //         this.prevImage()
+        //     }
+        //
+        //
+        //     ReactDOM.findDOMNode(this.$images.current).removeEventListener('wheel', this.handleScrollSingle);
+        //     timeout = setTimeout(() => {
+        //         // clearTimeout();//
+        //         ReactDOM.findDOMNode(this.$images.current).addEventListener("wheel", this.handleScrollSingle);
+        //     }, 1000)
+        // }, 200)
     }
+
+    // componentDidMount() {
+    //     this.handleScrollSingle = this.handleScroll();
+    //
+    //     if (!process.browser) return;
+    //     ReactDOM.findDOMNode(this.$images.current).addEventListener("wheel", this.handleScrollSingle);
+    // }
+    //
+    // componentWillUnmount() {
+    //     // console.log('this.$images', this.$images)
+    //     // if (!process.browser || !this.$images) return;
+    //     ReactDOM.findDOMNode(this.$images.current).removeEventListener('wheel', this.handleScrollSingle);
+    // }
 
     render() {
         const set          = this.state.set;
@@ -85,11 +120,13 @@ class ProjectScreen extends Component {
 
         let {id, title, slug, summary, name, images} = project || {};
 
+        images = images || [];
+
 
         const path = _.get(this.props, "location.pathname");
 
         return (
-            <div data-screen="project" data-visible={LiveStore.isContentVisible}>
+            <div data-screen="project" data-visible={LiveStore.isContentVisible} ref={this.$images}>
                 <Helmet>
                     <title>{`${title}`} | Project | Web Natives Photography</title>
                 </Helmet>
@@ -97,8 +134,10 @@ class ProjectScreen extends Component {
                 {/*<div className="project-title" dangerouslyProjectInnerHTML={{__html: title}}/>*/}
                 {/*<div className="project-summary" dangerouslyProjectInnerHTML={{__html: summary}}/>*/}
 
-                <Swipe onSwipeRight={() => this.prevImage()} onSwipeLeft={() => this.nextImage()}>
-                    <div className="project-images" onScroll={this.handleScroll}>
+                <Swipe onSwipeRight={() => this.prevImage()}
+                       onSwipeLeft={() => this.nextImage()}
+                >
+                    <div className="project-images">
                         <div className="image-prev" onClick={() => this.prevImage()}/>
                         <div className="image-next" onClick={() => this.nextImage()}/>
 
@@ -113,8 +152,9 @@ class ProjectScreen extends Component {
                     </div>
                 </Swipe>
 
-                <div className="project-info">
-                    <Link className="info-set" to={`/set/${set.slug}`} dangerouslySetInnerHTML={{__html: set.title}}/>
+                <div className="project-info" ref="project-info">
+                    <Link className="info-set" to={`/set/${_.get(set, "slug")}`}
+                          dangerouslySetInnerHTML={{__html: _.get(set, "title")}}/>
                     <div className="info-title" dangerouslySetInnerHTML={{__html: title}}/>
                     <div className="info-title">{currentImage + 1} of {images.length}</div>
 

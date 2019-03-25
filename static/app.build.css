@@ -219,7 +219,8 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: .6s; }
+  transition: .6s;
+  color: rgba(0, 0, 0, 0.3); }
   [data-component="loader"][data-visible="true"] {
     opacity: 1; }
 

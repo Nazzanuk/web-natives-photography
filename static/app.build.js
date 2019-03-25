@@ -189,7 +189,7 @@ function (_Component) {
 
       return React.createElement("div", {
         "data-page": "page"
-      }, React.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_5__["Helmet"], null, React.createElement("title", null, "Web Natives Photography")), React.createElement(components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["default"], null), React.createElement("div", {
+      }, React.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_5__["Helmet"], null, React.createElement("title", null, "Web Natives Photography")), React.createElement(components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["default"], null), React.createElement(components_loader_loader_component__WEBPACK_IMPORTED_MODULE_12__["default"], null), React.createElement("div", {
         className: "app-screens"
       }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
         exact: true,
@@ -3571,16 +3571,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_easy_swipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-easy-swipe */ "./node_modules/react-easy-swipe/lib/index.js");
-/* harmony import */ var react_easy_swipe__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_easy_swipe__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var components_promos_promos_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/promos/promos.component */ "./app/components/promos/promos.component.js");
-/* harmony import */ var stores_live_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! stores/live.store */ "./app/stores/live.store.js");
-/* harmony import */ var stores_post_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! stores/post.store */ "./app/stores/post.store.js");
-/* harmony import */ var stores_page_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! stores/page.store */ "./app/stores/page.store.js");
-/* harmony import */ var stores_nav_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! stores/nav.store */ "./app/stores/nav.store.js");
-/* harmony import */ var requests_get_project_by_slug_request__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! requests/get-project-by-slug.request */ "./app/requests/get-project-by-slug.request.js");
-/* harmony import */ var _services_helper_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/helper.service */ "./app/services/helper.service.js");
-/* harmony import */ var _requests_get_set_by_slug_request__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../requests/get-set-by-slug.request */ "./app/requests/get-set-by-slug.request.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_easy_swipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-easy-swipe */ "./node_modules/react-easy-swipe/lib/index.js");
+/* harmony import */ var react_easy_swipe__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_easy_swipe__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var components_promos_promos_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/promos/promos.component */ "./app/components/promos/promos.component.js");
+/* harmony import */ var stores_live_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! stores/live.store */ "./app/stores/live.store.js");
+/* harmony import */ var stores_post_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! stores/post.store */ "./app/stores/post.store.js");
+/* harmony import */ var stores_page_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! stores/page.store */ "./app/stores/page.store.js");
+/* harmony import */ var stores_nav_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! stores/nav.store */ "./app/stores/nav.store.js");
+/* harmony import */ var requests_get_project_by_slug_request__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! requests/get-project-by-slug.request */ "./app/requests/get-project-by-slug.request.js");
+/* harmony import */ var _services_helper_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../services/helper.service */ "./app/services/helper.service.js");
+/* harmony import */ var _requests_get_set_by_slug_request__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../requests/get-set-by-slug.request */ "./app/requests/get-set-by-slug.request.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -3607,7 +3609,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // const Hammer = require('react-hammerjs');
+
 
 
 
@@ -3646,16 +3648,16 @@ function (_Component) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              stores_live_store__WEBPACK_IMPORTED_MODULE_7__["default"].HidePage();
+              stores_live_store__WEBPACK_IMPORTED_MODULE_8__["default"].HidePage();
               _$get = _.get(_assertThisInitialized(_this), "props.match.params"), projectSlug = _$get.projectSlug, setSlug = _$get.setSlug;
               _context.next = 4;
-              return Object(requests_get_project_by_slug_request__WEBPACK_IMPORTED_MODULE_11__["default"])(projectSlug);
+              return Object(requests_get_project_by_slug_request__WEBPACK_IMPORTED_MODULE_12__["default"])(projectSlug);
 
             case 4:
               _ref2 = _context.sent;
               project = _ref2.project;
               _context.next = 8;
-              return Object(_requests_get_set_by_slug_request__WEBPACK_IMPORTED_MODULE_13__["default"])(setSlug);
+              return Object(_requests_get_set_by_slug_request__WEBPACK_IMPORTED_MODULE_14__["default"])(setSlug);
 
             case 8:
               _ref3 = _context.sent;
@@ -3666,7 +3668,7 @@ function (_Component) {
                 set: set
               });
 
-              stores_live_store__WEBPACK_IMPORTED_MODULE_7__["default"].ShowPage();
+              stores_live_store__WEBPACK_IMPORTED_MODULE_8__["default"].ShowPage();
               console.log("{project, set}", {
                 project: project,
                 set: set
@@ -3679,6 +3681,7 @@ function (_Component) {
         }
       }, _callee);
     }));
+    _this.$images = React.createRef();
     console.info("ProjectScreen", {
       props: props,
       state: _this.state
@@ -3687,7 +3690,7 @@ function (_Component) {
     if (!_this.state.project || !_this.state.set) {
       _this.init();
     } else {
-      stores_live_store__WEBPACK_IMPORTED_MODULE_7__["default"].ShowPage();
+      stores_live_store__WEBPACK_IMPORTED_MODULE_8__["default"].ShowPage();
     }
 
     return _this;
@@ -3721,9 +3724,38 @@ function (_Component) {
     }
   }, {
     key: "handleScroll",
-    value: function handleScroll(event1, event2) {
-      console.log('handleScroll', event1, event2);
-    }
+    value: function handleScroll() {} // let timeout;
+    //
+    // return _.throttle((event) => {
+    //     console.log('handleScroll', event);
+    //
+    //     if (event.deltaY > 0) {
+    //         this.nextImage()
+    //     }
+    //     if (event.deltaY < 0) {
+    //         this.prevImage()
+    //     }
+    //
+    //
+    //     ReactDOM.findDOMNode(this.$images.current).removeEventListener('wheel', this.handleScrollSingle);
+    //     timeout = setTimeout(() => {
+    //         // clearTimeout();//
+    //         ReactDOM.findDOMNode(this.$images.current).addEventListener("wheel", this.handleScrollSingle);
+    //     }, 1000)
+    // }, 200)
+    // componentDidMount() {
+    //     this.handleScrollSingle = this.handleScroll();
+    //
+    //     if (!process.browser) return;
+    //     ReactDOM.findDOMNode(this.$images.current).addEventListener("wheel", this.handleScrollSingle);
+    // }
+    //
+    // componentWillUnmount() {
+    //     // console.log('this.$images', this.$images)
+    //     // if (!process.browser || !this.$images) return;
+    //     ReactDOM.findDOMNode(this.$images.current).removeEventListener('wheel', this.handleScrollSingle);
+    // }
+
   }, {
     key: "render",
     value: function render() {
@@ -3734,7 +3766,7 @@ function (_Component) {
       var currentImage = this.state.currentImage;
       if (!project || !set) return React.createElement("div", {
         "data-screen": "project",
-        "data-visible": stores_live_store__WEBPACK_IMPORTED_MODULE_7__["default"].isContentVisible
+        "data-visible": stores_live_store__WEBPACK_IMPORTED_MODULE_8__["default"].isContentVisible
       });
 
       var _ref4 = project || {},
@@ -3745,12 +3777,15 @@ function (_Component) {
           name = _ref4.name,
           images = _ref4.images;
 
+      images = images || [];
+
       var path = _.get(this.props, "location.pathname");
 
       return React.createElement("div", {
         "data-screen": "project",
-        "data-visible": stores_live_store__WEBPACK_IMPORTED_MODULE_7__["default"].isContentVisible
-      }, React.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_3__["Helmet"], null, React.createElement("title", null, "".concat(title), " | Project | Web Natives Photography")), React.createElement(react_easy_swipe__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        "data-visible": stores_live_store__WEBPACK_IMPORTED_MODULE_8__["default"].isContentVisible,
+        ref: this.$images
+      }, React.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_3__["Helmet"], null, React.createElement("title", null, "".concat(title), " | Project | Web Natives Photography")), React.createElement(react_easy_swipe__WEBPACK_IMPORTED_MODULE_6___default.a, {
         onSwipeRight: function onSwipeRight() {
           return _this2.prevImage();
         },
@@ -3758,8 +3793,7 @@ function (_Component) {
           return _this2.nextImage();
         }
       }, React.createElement("div", {
-        className: "project-images",
-        onScroll: this.handleScroll
+        className: "project-images"
       }, React.createElement("div", {
         className: "image-prev",
         onClick: function onClick() {
@@ -3780,15 +3814,16 @@ function (_Component) {
           className: "image-box"
         }, React.createElement("div", {
           className: "box-image",
-          style: Object(_services_helper_service__WEBPACK_IMPORTED_MODULE_12__["Backgroundify"])(image.url)
+          style: Object(_services_helper_service__WEBPACK_IMPORTED_MODULE_13__["Backgroundify"])(image.url)
         }));
       })))), React.createElement("div", {
-        className: "project-info"
+        className: "project-info",
+        ref: "project-info"
       }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "info-set",
-        to: "/set/".concat(set.slug),
+        to: "/set/".concat(_.get(set, "slug")),
         dangerouslySetInnerHTML: {
-          __html: set.title
+          __html: _.get(set, "title")
         }
       }), React.createElement("div", {
         className: "info-title",
