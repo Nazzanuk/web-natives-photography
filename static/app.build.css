@@ -1918,6 +1918,9 @@
       transition: .6s;
       position: relative;
       overflow: visible; }
+      @media (max-width: 575px) {
+        [data-screen="project"] .project-images .image-box-container {
+          transition: .3s; } }
     [data-screen="project"] .project-images .image-prev {
       position: absolute;
       top: 0;

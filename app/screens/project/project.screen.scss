@@ -77,6 +77,10 @@
       transition      : .6s;
       position        : relative;
       overflow        : visible;
+
+      @include  mobile {
+        transition      : .3s;
+      }
     }
 
     .image-prev {

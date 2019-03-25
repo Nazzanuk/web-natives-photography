@@ -5,6 +5,10 @@ import {Link}                                       from "react-router-dom";
 import {Helmet}                                     from "react-helmet";
 import {Component, useState, useEffect, useReducer} from "react";
 
+// const Hammer = require('react-hammerjs');
+import Swipe                                        from 'react-easy-swipe';
+
+
 import PromosComponent from "components/promos/promos.component";
 
 import LiveStore                              from "stores/live.store";
@@ -68,6 +72,10 @@ class ProjectScreen extends Component {
         this.setState({currentImage});
     }
 
+    handleScroll(event1, event2) {
+        console.log('handleScroll', event1, event2)
+    }
+
     render() {
         const set          = this.state.set;
         const project      = this.state.project;
@@ -89,19 +97,21 @@ class ProjectScreen extends Component {
                 {/*<div className="project-title" dangerouslyProjectInnerHTML={{__html: title}}/>*/}
                 {/*<div className="project-summary" dangerouslyProjectInnerHTML={{__html: summary}}/>*/}
 
-                <div className="project-images">
-                    <div className="image-prev" onClick={() => this.prevImage()}/>
-                    <div className="image-next" onClick={() => this.nextImage()}/>
+                <Swipe onSwipeRight={() => this.prevImage()} onSwipeLeft={() => this.nextImage()}>
+                    <div className="project-images" onScroll={this.handleScroll}>
+                        <div className="image-prev" onClick={() => this.prevImage()}/>
+                        <div className="image-next" onClick={() => this.nextImage()}/>
 
-                    <div className="image-box-container" style={{marginLeft: `-${currentImage * 100}vw`}}>
-                        {images.map(image =>
-                            <div className="image-box">
-                                <div className="box-image" style={Backgroundify(image.url)}/>
-                            </div>
-                        )}
+                        <div className="image-box-container" style={{marginLeft: `-${currentImage * 100}vw`}}>
+                            {images.map(image =>
+                                <div className="image-box">
+                                    <div className="box-image" style={Backgroundify(image.url)}/>
+                                </div>
+                            )}
+                        </div>
+
                     </div>
-
-                </div>
+                </Swipe>
 
                 <div className="project-info">
                     <Link className="info-set" to={`/set/${set.slug}`} dangerouslySetInnerHTML={{__html: set.title}}/>
