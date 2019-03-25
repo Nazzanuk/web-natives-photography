@@ -3277,17 +3277,8 @@ function (_Component) {
         to: "/set/interiors"
       }, "Interiors"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "set",
-        to: "/set/creative"
-      }, "Creative"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "set",
-        to: "/set/portraits"
-      }, "Portraits"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "set",
         to: "/set/landscapes"
-      }, "Landscapes"), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "set",
-        to: "/set/events"
-      }, "Events")));
+      }, "Landscapes")));
     }
   }]);
 
