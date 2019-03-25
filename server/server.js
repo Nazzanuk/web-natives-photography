@@ -1,5 +1,6 @@
 import path from "path";
 import "babel-polyfill";
+import NodeCache from "node-cache";
 
 
 // let fs = require("fs");
@@ -22,6 +23,7 @@ import GetArticlesByCategorySlug from "../app/requests/get-articles-by-category-
 import GetCategoryBySlug         from "../app/requests/get-category-by-slug.request";
 
 
+export const myCache = new NodeCache({stdTTL: (60 * 60 * 24), checkperiod: 0});
 const port = process.env.PORT || 4040;
 
 
@@ -39,7 +41,19 @@ async function StartServer() {
     hapiServer.register({
         plugin: require('hapi-require-https'),
         options: {}
-    })
+    });
+
+    hapiServer.route({
+        method : "GET",
+        path   : "/clear-cache",
+        handler: async (request, h) => {
+
+            const stats = myCache.getStats();
+            myCache.flushAll();
+
+            return `cache cleared :)\n\n  ${JSON.stringify(stats)}`;
+        },
+    });
 
     hapiServer.route({
         method : "GET",

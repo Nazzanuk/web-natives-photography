@@ -1,10 +1,8 @@
 import fetch     from "isomorphic-unfetch";
-import NodeCache from "node-cache";
 
 import {NormalizeArticle, NormalizeMedia, NormalizeUser, NormalizePage, NormalizeProject, NormalizeSet} from "./normalize.service";
+import {myCache}                                                                                        from "../server";
 
-
-const myCache = new NodeCache({stdTTL: (60 * 60 * 24), checkperiod: 0});
 const API     = "http://206.189.113.211/wp-json/wp/v2";
 // const ACF_API = "https://admin.platformonline.uk/wp-json/acf/v3";
 
