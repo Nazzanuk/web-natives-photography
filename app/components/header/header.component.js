@@ -10,13 +10,14 @@ function HeaderComponent() {
 
     return (
         <div data-component="header">
-            <div className="header">
-
                 <Link className="header-logo" to="/">
                     Web Natives Photography
                 </Link>
 
-            </div>
+                <a className="header-menu" href="mailto:info@webnatives.uk">
+                    info@webnatives.uk
+
+                </a>
         </div>
     );
 }

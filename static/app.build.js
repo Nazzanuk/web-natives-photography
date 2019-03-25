@@ -474,12 +474,13 @@ __webpack_require__.r(__webpack_exports__);
 function HeaderComponent() {
   return React.createElement("div", {
     "data-component": "header"
-  }, React.createElement("div", {
-    className: "header"
   }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     className: "header-logo",
     to: "/"
-  }, "Web Natives Photography")));
+  }, "Web Natives Photography"), React.createElement("a", {
+    className: "header-menu",
+    href: "mailto:info@webnatives.uk"
+  }, "info@webnatives.uk"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_easy_state__WEBPACK_IMPORTED_MODULE_1__["view"])(HeaderComponent));

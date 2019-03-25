@@ -17,6 +17,13 @@
     text-transform: uppercase;
     cursor: pointer;
     /* border: 1px solid #ddd; */ }
+  [data-component="header"] .header-menu {
+    margin-left: auto;
+    color: black;
+    font-weight: 400;
+    transition: 1.5s; }
+    [data-component="header"] .header-menu:hover {
+      color: #888; }
 
 [data-component="footer"] {
   background: #f2ae0d;
