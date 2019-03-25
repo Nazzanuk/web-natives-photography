@@ -21,7 +21,7 @@
     margin-left: auto;
     color: black;
     font-weight: 400;
-    transition: 1.5s; }
+    transition: 1.0s; }
     [data-component="header"] .header-menu:hover {
       color: #888; }
 
@@ -83,7 +83,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: 1.5s;
+    transition: 1.0s;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -96,7 +96,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: 1.5s;
+    transition: 1.0s;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -167,7 +167,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-  transition: 1.5s; }
+  transition: 1.0s; }
   [data-component="newsletter-popup"][data-active="true"] {
     z-index: 2000; }
     [data-component="newsletter-popup"][data-active="true"] .newsletter-popup-background {
@@ -183,7 +183,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: 1.5s;
+    transition: 1.0s;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -197,7 +197,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: 1.5s;
+    transition: 1.0s;
     width: 300px;
     height: 300px;
     background: white;
@@ -818,7 +818,7 @@
     margin-left: -20px;
     align-items: flex-end;
     justify-content: flex-start;
-    transition: 1.5s;
+    transition: 1.0s;
     will-change: left; }
     [data-component="latest"] .latest .latest-item {
       width: 300px;
@@ -829,7 +829,7 @@
       display: flex;
       flex-direction: column;
       margin-left: 20px;
-      transition: 1.5s;
+      transition: 1.0s;
       text-decoration: none;
       cursor: pointer;
       transition: .2s;
@@ -863,7 +863,7 @@
         color: black;
         display: flex;
         flex-direction: column;
-        transition: 1.5s; }
+        transition: 1.0s; }
         [data-component="latest"] .latest .latest-item .item-overlay .overlay-title {
           font-size: 18px;
           font-weight: 400;
@@ -1023,7 +1023,7 @@
     flex-direction: column;
     padding: 40px;
     border-top: 5px solid #f3b520;
-    transition: 1.5s;
+    transition: 1.0s;
     display: none; }
     [data-component="newsletter"] .newsletter[data-visible=true] {
       opacity: 1;
@@ -2378,12 +2378,12 @@ html body {
     padding: 40px; }
     html body [data-screen][data-visible="true"] {
       opacity: 1;
-      transition: 1.5s; }
+      transition: 1.0s; }
   html body [data-component][data-visible="false"] {
     opacity: 0; }
   html body [data-component][data-visible="true"] {
     opacity: 1;
-    transition: 1.5s; }
+    transition: 1.0s; }
   html body .row {
     margin-left: -20px;
     margin-right: -20px; }
