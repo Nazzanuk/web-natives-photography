@@ -4,13 +4,13 @@
   flex           : 1 1 auto;
   display        : flex;
   flex-direction : column;
-  width:100vw;
+  width          : 100vw;
   padding-left   : 0 !important;
   padding-right  : 0 !important;
 
   @include mobile {
     padding-top    : 0 !important;
-    padding-bottom: 0px !important;
+    padding-bottom : 0px !important;
   }
 
 
@@ -78,8 +78,8 @@
       position        : relative;
       overflow        : visible;
 
-      @include  mobile {
-        transition      : .3s;
+      @include mobile {
+        transition : .3s;
       }
     }
 
@@ -110,11 +110,11 @@
       height          : auto;
       cursor          : pointer;
       padding         : 0 40px;
-      max-height: 60vh;
+      max-height      : 60vh;
 
       @include mobile {
-        flex            : 0 0 calc(100vw);
-      padding         : 0 0px;
+        flex    : 0 0 calc(100vw);
+        padding : 0 0px;
       }
 
       .box-image {
