@@ -7,25 +7,17 @@ import {BrowserRouter, Route, Link} from "react-router-dom";
 import {Helmet}                     from "react-helmet";
 
 
-import {API}     from "constants/config.constants";
-// import DataStore, {Subject, GetPage} from "stores/data.store";
 import LiveStore from "stores/live.store";
 
 import HeaderComponent          from "components/header/header.component";
-import FooterComponent          from "components/footer/footer.component";
-import SidebarComponent         from "components/sidebar/sidebar.component";
-import NewsletterPopupComponent from "components/newsletter-popup/newsletter-popup.component";
 import LoaderComponent          from "components/loader/loader.component";
 
 
 import HomeScreen     from "screens/home/home.screen";
 import ArticleScreen  from "screens/article/article.screen";
 import PageScreen     from "screens/page/page.screen";
-import CategoryScreen from "screens/category/category.screen";
 import SetScreen      from "screens/set/set.screen";
 import ProjectScreen  from "screens/project/project.screen";
-import TagScreen      from "screens/tag/tag.screen";
-import AuthorScreen   from "screens/author/author.screen";
 
 import "global/app.scss";
 
@@ -43,7 +35,7 @@ class App extends Component {
         return (
             <div data-page="page">
                 <Helmet>
-                    <title>Web Natives Photography</title>
+                    <title>Web Natives Photography | Corporate Photographers</title>
                 </Helmet>
                 <HeaderComponent/>
                 <LoaderComponent/>
@@ -56,9 +48,6 @@ class App extends Component {
                            component={(props) => <SetScreen {...props} {...this.props}/>}/>
                     <Route exact path="/project/:setSlug/:projectSlug"
                            component={(props) => <ProjectScreen {...props} {...this.props}/>}/>
-                    {/*<Route exact path="/project/:projectSlug"*/}
-                           {/*component={(props) => <ProjectScreen {...props} {...this.props}/>}/>*/}
-                    {/*<Route exact path="/articles/:articleSlug" component={ArticleScreen}/>*/}
                     <Route exact path="/articles/:articleSlug"
                            component={(props) => <ArticleScreen {...props} {...this.props}/>}/>
                 </div>
