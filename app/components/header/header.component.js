@@ -14,7 +14,7 @@ function HeaderComponent() {
                     Web Natives Photography
                 </Link>
 
-                <a className="header-menu" href="mailto:info@webnatives.uk">
+                <a className="header-menu" href="mailto:info@webnatives.photography">
                     info@webnatives.photography
 
                 </a>

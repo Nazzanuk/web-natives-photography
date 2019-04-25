@@ -400,7 +400,7 @@ function HeaderComponent() {
     to: "/"
   }, "Web Natives Photography"), React.createElement("a", {
     className: "header-menu",
-    href: "mailto:info@webnatives.uk"
+    href: "mailto:info@webnatives.photography"
   }, "info@webnatives.photography"));
 }
 
