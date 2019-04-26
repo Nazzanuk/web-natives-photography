@@ -3,7 +3,8 @@ import "./project.screen.scss";
 import {store, view}                                from "react-easy-state";
 import {Link}                                       from "react-router-dom";
 import {Helmet}                                     from "react-helmet";
-import {Component, useState, useEffect, useReducer} from "react";
+import {Component} from "react";
+import ReactGA                      from "react-ga";
 
 
 import ReactDOM from "react-dom";
@@ -32,6 +33,8 @@ class ProjectScreen extends Component {
     constructor(props) {
         super(props);
 
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        console.log(window.location.pathname + window.location.search);
         this.$images = React.createRef();
 
         console.info("ProjectScreen", {props, state: this.state});

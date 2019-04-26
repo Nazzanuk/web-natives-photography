@@ -62,6 +62,9 @@ class PageScreen extends Component {
     constructor(props) {
         super(props);
 
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        console.log(window.location.pathname + window.location.search);
+
         console.info("PageScreen", {props, state: this.state});
 
         if (!this.state.page) {

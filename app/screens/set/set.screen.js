@@ -1,9 +1,10 @@
 import "./set.screen.scss";
 
-import {store, view}                                from "react-easy-state";
-import {Link}                                       from "react-router-dom";
-import {Helmet}                                     from "react-helmet";
-import {Component, useState, useEffect, useReducer} from "react";
+import {store, view} from "react-easy-state";
+import {Link}        from "react-router-dom";
+import {Helmet}      from "react-helmet";
+import {Component}   from "react";
+import ReactGA       from "react-ga";
 
 import PromosComponent from "components/promos/promos.component";
 
@@ -17,11 +18,14 @@ import {Backgroundify, NormalizeComponents}   from "../../services/helper.servic
 
 class SetScreen extends Component {
     state = {
-        set         : this.props.set
+        set: this.props.set,
     };
 
     constructor(props) {
         super(props);
+
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        console.log(window.location.pathname + window.location.search);
 
         console.info("SetScreen", {props, state: this.state});
 
@@ -42,7 +46,7 @@ class SetScreen extends Component {
         this.setState({set});
         LiveStore.ShowPage();
 
-        console.log("set", set)
+        console.log("set", set);
     };
 
     componentDidUpdate(prevProps) {
@@ -75,7 +79,7 @@ class SetScreen extends Component {
                         <Link className="project" to={`/project/${slug}/${project.slug}`}>
                             <div className="project-image" style={Backgroundify(project.images[0].url)}/>
                             <div className="project-title" dangerouslySetInnerHTML={{__html: project.title}}/>
-                        </Link>
+                        </Link>,
                     )}
 
                 </div>

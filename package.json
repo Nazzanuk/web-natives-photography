@@ -36,6 +36,7 @@
     "react-dom": "^16.8.4",
     "react-easy-state": "^6.0.5",
     "react-easy-swipe": "^0.0.17",
+    "react-ga": "^2.5.7",
     "react-hammerjs": "^1.0.1",
     "react-helmet": "^5.2.0",
     "react-router": "^4.3.1",

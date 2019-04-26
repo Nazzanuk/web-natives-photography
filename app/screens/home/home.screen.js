@@ -1,8 +1,9 @@
 import "./home.screen.scss";
 
-import {store, view}                                from "react-easy-state";
-import {Link}                                       from "react-router-dom";
-import {Component, useState, useEffect, useReducer} from "react";
+import {store, view} from "react-easy-state";
+import {Link}        from "react-router-dom";
+import {Component}   from "react";
+import ReactGA       from "react-ga";
 
 import FeatureComponent    from "components/feature/feature.component";
 import ImageComponent      from "components/image/image.component";
@@ -16,10 +17,10 @@ import InstagramComponent  from "components/instagram/instagram.component";
 import NewsletterComponent from "components/newsletter/newsletter.component";
 import VideoComponent      from "components/video/video.component";
 
-import LiveStore                from "stores/live.store";
+import LiveStore from "stores/live.store";
 
-import GetPageBySlug            from "requests/get-page-by-slug.request";
-import {NormalizeComponents}    from "services/helper.service";
+import GetPageBySlug         from "requests/get-page-by-slug.request";
+import {NormalizeComponents} from "services/helper.service";
 
 
 class HomeScreen extends Component {
@@ -29,6 +30,9 @@ class HomeScreen extends Component {
 
     constructor(props) {
         super(props);
+
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        console.log(window.location.pathname + window.location.search);
 
         LiveStore.ChangePage();
         console.info("HomeScreen", {props, state: this.state});
@@ -65,15 +69,15 @@ class HomeScreen extends Component {
 
         return (
             <div data-screen="home" data-visible={LiveStore.isContentVisible}>
-                    <div className="home-sets">
-                        <Link className="set" to={`/set/architecture`}>Architecture</Link>
-                        <Link className="set" to={`/set/interiors`}>Interiors</Link>
-                        <Link className="set" to={`/set/editorial`}>Editorial</Link>
-                        <Link className="set" to={`/set/landscapes`}>Landscapes</Link>
-                        {/*<Link className="set" to={`/set/creative`}>Creative</Link>*/}
-                        {/*<Link className="set" to={`/set/portraits`}>Portraits</Link>*/}
-                        {/*<Link className="set" to={`/set/events`}>Events</Link>*/}
-                    </div>
+                <div className="home-sets">
+                    <Link className="set" to={`/set/architecture`}>Architecture</Link>
+                    <Link className="set" to={`/set/interiors`}>Interiors</Link>
+                    <Link className="set" to={`/set/editorial`}>Editorial</Link>
+                    <Link className="set" to={`/set/landscapes`}>Landscapes</Link>
+                    {/*<Link className="set" to={`/set/creative`}>Creative</Link>*/}
+                    {/*<Link className="set" to={`/set/portraits`}>Portraits</Link>*/}
+                    {/*<Link className="set" to={`/set/events`}>Events</Link>*/}
+                </div>
             </div>
         );
     }
